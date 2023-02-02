@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./data.css"
 export const Data = () => {
     const [user, setUser] = useState([]);
-    const [click, setClick] = useState(false);
+  const [click, setClick] = useState(user);
+    const [id,setId]=useState(0);
      const fetchData = () => {
        return fetch("https://jsonplaceholder.typicode.com/users")
          .then((response) => response.json())
